@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:BudgetApp" 
+             x:Class="BudgetApp.Views.NamePageView"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true">
+    <StackLayout Padding="20"
+                 VerticalOptions="Center">
+        <Label Text="{Binding NameInputLabel}" 
+               FontSize="Large"
+               HorizontalOptions="Center" 
+               Margin="0,0,0,40" />
+        <Entry HorizontalOptions="Center" 
+               WidthRequest="350" 
+               HeightRequest="60"
+               FontSize="Large"
+               Placeholder="{Binding NameInputPlaceholder}"
+               Margin="0,0,0,40"
+               Text="{Binding NameInputValue}"></Entry>
+        <Button
+            Text="{Binding NameSubmitText}"
+            TextColor="White"
+            FontAttributes="Bold"
+            BackgroundColor="#4FB99F"
+            HorizontalOptions="Center"
+            WidthRequest="150"
+            HeightRequest="60"
+            Command="{Binding SubmitCommand}"
+            FontSize="Large"></Button>
+    </StackLayout>
+</ContentPage>
