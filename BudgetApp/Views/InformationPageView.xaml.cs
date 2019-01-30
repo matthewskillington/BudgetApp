@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using BudgetApp.ViewModels;
 using Xamarin.Forms;
 
 namespace BudgetApp.Views
@@ -10,6 +10,7 @@ namespace BudgetApp.Views
         public InformationPageView()
         {
             InitializeComponent();
+            BindingContext = new InformationPageViewModel();
         }
     }
 }

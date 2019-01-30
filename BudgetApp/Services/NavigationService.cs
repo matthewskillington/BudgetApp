@@ -21,6 +21,8 @@ namespace BudgetApp.Services
         public void NavigateToAsync<TViewModel>()
         {
             var page = CreatePage(typeof(TViewModel));
+
+            CurrentApplication.MainPage = page as Page;
         }
 
         private object CreatePage(Type viewModelType)
@@ -47,6 +49,7 @@ namespace BudgetApp.Services
         private void CreatePageViewModelMappings()
         {
             _mappings.Add(typeof(NamePageViewModel), typeof(NamePageView));
+            _mappings.Add(typeof(InformationPageViewModel), typeof(InformationPageView));
         }
     }
 }

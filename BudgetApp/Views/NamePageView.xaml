@@ -11,13 +11,10 @@
                FontSize="Large"
                HorizontalOptions="Center" 
                Margin="0,0,0,40" />
-        <Entry HorizontalOptions="Center" 
-               WidthRequest="350" 
-               HeightRequest="60"
-               FontSize="Large"
+        <Entry Style="{StaticResource StandardInput}"
                Placeholder="{Binding NameInputPlaceholder}"
                Margin="0,0,0,40"
-               Text="{Binding NameInputValue}"></Entry>
+               Text="{Binding NameInputValue}"/>
         <Button
             Text="{Binding NameSubmitText}"
             TextColor="White"

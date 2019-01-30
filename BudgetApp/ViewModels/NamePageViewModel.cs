@@ -43,7 +43,7 @@ namespace BudgetApp.ViewModels
 
         private void SubmitNameAndNavigate()
         {
-            //_navigationService.NavigateToAsync<>
+            _navigationService.NavigateToAsync<InformationPageViewModel>();
         }
 
 
