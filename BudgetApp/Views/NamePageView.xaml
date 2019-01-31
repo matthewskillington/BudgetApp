@@ -17,13 +17,7 @@
                Text="{Binding NameInputValue}"/>
         <Button
             Text="{Binding NameSubmitText}"
-            TextColor="White"
-            FontAttributes="Bold"
-            BackgroundColor="#4FB99F"
-            HorizontalOptions="Center"
-            WidthRequest="150"
-            HeightRequest="60"
             Command="{Binding SubmitCommand}"
-            FontSize="Large"></Button>
+            Style="{StaticResource StandardButton}"></Button>
     </StackLayout>
 </ContentPage>

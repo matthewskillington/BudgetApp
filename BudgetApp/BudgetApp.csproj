@@ -18,6 +18,8 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Bootstrap\" />
     <Folder Include="Services\" />
+    <Folder Include="Styles\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Views\NamePageView.cs" />
@@ -25,5 +27,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Views\MainPage.xaml" />
+    <EmbeddedResource Remove="Styles\StockAppStyles.txt" />
   </ItemGroup>
 </Project>

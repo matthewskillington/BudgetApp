@@ -11,15 +11,42 @@
            HorizontalOptions="Center" 
            Margin="0,0,0,40"/>
         
-        <Label 
-            Text="Bill one"
-            HorizontalOptions="Center"
-            Margin="0,10,0,10"/>
-        <Entry Style="{StaticResource StandardInput}"
-               Placeholder="Bill Name"/>
-        <Entry Style="{StaticResource StandardInput}"
-               Placeholder="Amount"/>
+        <Button
+            Text="Add Item"
+            Style="{StaticResource StandardButton}"
+            Command="{Binding AddCommand}"
+            HorizontalOptions="Start"/>
+        
+        
+        <ListView
+            ItemsSource="{Binding budgetItems}"
+            HasUnevenRows="true"
+            SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding LabelName}"
+                                   HorizontalOptions="Start"
+                                   Margin="0,20,0,10"/>
+                            <Entry Style="{StaticResource StandardInput}"
+                                   HorizontalOptions="StartAndExpand"
+                                   Placeholder="Bill Name"
+                                   Text="{Binding Name}"
+                                   />
+                            <Entry Style="{StaticResource StandardInput}"
+                                   HorizontalOptions="StartAndExpand"
+                                   Placeholder="Amount"
+                                   Text="{Binding Amount}"
+                                   />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
             
+        
         
     </StackLayout> 
 </ContentPage>

@@ -15,5 +15,16 @@
         <Setter Property="WidthRequest" Value="350"></Setter>
         <Setter Property="FontSize" Value="Large"></Setter>
     </Style>
+    
+    <Style
+        x:Key="StandardButton"
+        TargetType="Button">
+        <Setter Property="TextColor" Value="White"></Setter>
+        <Setter Property="BackgroundColor" Value="#4FB99F"></Setter>
+        <Setter Property="HorizontalOptions" Value="Center"></Setter>
+        <Setter Property="WidthRequest" Value="150"></Setter>
+        <Setter Property="HeightRequest" Value="60"></Setter>
+        <Setter Property="FontSize" Value="Large"></Setter>
+    </Style>
   
 </ResourceDictionary>
