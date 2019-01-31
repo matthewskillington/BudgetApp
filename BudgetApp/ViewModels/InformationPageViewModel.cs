@@ -10,6 +10,7 @@ namespace BudgetApp.ViewModels
     {
         public InformationPageViewModel()
         {
+            BudgetItemIdCount = 0;
             InfoPageLabel = "Information Page";
             budgetItems = new ObservableCollection<BudgetItem>();
         }
@@ -32,9 +33,39 @@ namespace BudgetApp.ViewModels
 
         public ICommand AddCommand => new Command(AddNewBudgetItem);
 
+        private int BudgetItemIdCount { get; set; }
+
+
+        //Adds new item to the budgetItems array and checks for duplicates
         private void AddNewBudgetItem()
         {
-            budgetItems.Add(new BudgetItem(6, "Item 2"));
+            if (!CheckBudgetItemIdDoesntExist())
+            {
+                budgetItems.Add(new BudgetItem(BudgetItemIdCount, "Item" + (BudgetItemIdCount + 1)));
+                BudgetItemIdCount++;
+            }
+            else
+            {
+                throw new Exception($"Couldn't add budget item because one already exists with this ID");
+            }
+
+        }
+
+        // Checks budget item doesnt already exist with that ID
+        // True means item does exist, false means item does not exist
+        private bool CheckBudgetItemIdDoesntExist()
+        {
+            bool result = false;
+
+            for (int i = 0; i < budgetItems.Count; i++)
+            {
+                if (budgetItems[i].Id == BudgetItemIdCount)
+                {
+                    result = true;
+                }
+            }
+
+            return result;
         }
     }
 }
